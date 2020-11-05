@@ -454,12 +454,14 @@ function slider({counter, container, prev, next, slide, wrapper, field}){
 
     let index = 1;
     let offset = 0;
+
     function dotOpacity(){
         dots.forEach(dot => {
             dot.style.opacity = 0.5;
         });
         dots[index - 1].style.opacity = 1;   
     }
+    
     let indicators = document.createElement('ul');
     slider.style.position = 'relative';
     indicators.style.cssText = `
@@ -558,7 +560,7 @@ function slider({counter, container, prev, next, slide, wrapper, field}){
             offset = noStrAllowed(width) * (slideTo - 1);
             sliderField.style.transform = `translateX(-${offset}px)`;
             dotOpacity();
-            currentSlide.textContent = index;
+            currentSlide.textContent = Object(_services_getzero__WEBPACK_IMPORTED_MODULE_0__["default"])(index);
         });
     });
     // if(sliderImage.length < 10){                                 2 вариант слайдера
@@ -759,8 +761,8 @@ window.addEventListener('DOMContentLoaded', () => {
         prev: '.offer__slider-prev',
         next: '.offer__slider-next',
         slide: '.offer__slide',
-        wrapper: ".offer__slider-wrapper",
-        field: ".offer__slider-inner"
+        wrapper: '.offer__slider-wrapper',
+        field: '.offer__slider-inner'
     });
     Object(_modules_calculator__WEBPACK_IMPORTED_MODULE_4__["default"])();
     Object(_modules_timer__WEBPACK_IMPORTED_MODULE_6__["default"])('2021-05-20'); 

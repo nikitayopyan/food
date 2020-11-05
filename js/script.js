@@ -24,8 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
         prev: '.offer__slider-prev',
         next: '.offer__slider-next',
         slide: '.offer__slide',
-        wrapper: ".offer__slider-wrapper",
-        field: ".offer__slider-inner"
+        wrapper: '.offer__slider-wrapper',
+        field: '.offer__slider-inner'
     });
     calculator();
     timer('2021-05-20'); 
