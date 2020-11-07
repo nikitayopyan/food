@@ -8,7 +8,6 @@ function modalOpen(modalWindow, modalTimer){
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
 
-
     if (modalWindow){
         clearInterval(modalTimer);  
         console.log(modalTimer);
